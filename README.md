@@ -95,3 +95,7 @@ path: `config/admin-oauth.php`
         ],
     ],
 ```
+
+### 钉钉第三方登录开通链接
+
+https://open.dingtalk.com/document/personalapp-server/signature-calculation-for-logon-free-scenarios-1

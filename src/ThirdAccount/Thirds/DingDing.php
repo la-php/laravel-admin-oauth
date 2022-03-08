@@ -44,7 +44,11 @@ class DingDing extends ThirdAbstract
 
         $timestamp = time() . '000';
 
-        $userInfo = self::request('/sns/getuserinfo_bycode?accessKey=' . $this->config['app_id'] . '&timestamp=' . $timestamp . '&signature=' . $this->buildSign($timestamp), [
+        $userInfo = self::request('/sns/getuserinfo_bycode?' . http_build_query([
+                'accessKey' => $this->config['app_id'],
+                'timestamp' => $timestamp,
+                'signature' => $this->buildSign($timestamp),
+            ]), [
             'tmp_auth_code' => $params['code'],
         ], 'POST', 'JSON');
 
