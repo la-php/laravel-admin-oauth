@@ -38,7 +38,7 @@ class ServiceProvider extends BaseServiceProvider
         ]);
 
         config([
-            'admin.auth.excepts'    => $exceptRoutes,
+            'admin.auth.except'    => $exceptRoutes,
             'admin.auth.controller' => config('admin-oauth.controller'),
         ]);
     }

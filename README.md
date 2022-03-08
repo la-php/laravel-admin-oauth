@@ -21,7 +21,7 @@
 ### 安装
 ------------
 ```
-composer require cann/laravel-admin-oauth
+composer require la-php/laravel-admin-oauth
 ```
 
 ### 发布资源
