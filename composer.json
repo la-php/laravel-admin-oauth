@@ -1,12 +1,12 @@
 {
-    "name": "cann/laravel-admin-oauth",
+    "name": "la-php/laravel-admin-oauth",
     "description": "Laravel-Admin 的 OAuth 扩展",
     "type": "library",
     "license": "MIT",
     "authors": [
         {
-            "name": "陈问渔",
-            "email": "imcnny@gmail.com"
+            "name": "Echo",
+            "email": "wgqi1126@qq.com"
         }
     ],
     "minimum-stability": "dev",

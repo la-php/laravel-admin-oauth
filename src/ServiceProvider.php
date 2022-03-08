@@ -31,7 +31,7 @@ class ServiceProvider extends BaseServiceProvider
 
     protected static function initConfig()
     {
-        $exceptRoutes = array_merge(config('admin.auth.excepts'), [
+        $exceptRoutes = array_merge(config('admin.auth.except'), [
             'oauth/authorize',
             'oauth/callback',
             'oauth/bind-account',
