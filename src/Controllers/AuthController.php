@@ -2,18 +2,19 @@
 
 namespace Cann\Admin\OAuth\Controllers;
 
+use Dcat\Admin\Layout\Content;
 use Redirect;
 use Illuminate\Http\Request;
-use Encore\Admin\Facades\Admin;
-use Encore\Admin\Controllers\AuthController as BaseAuthController;
+use Dcat\Admin\Admin;
+use Dcat\Admin\Http\Controllers\AuthController as BaseAuthController;
 use Cann\Admin\OAuth\ThirdAccount\ThirdAccount;
 
 class AuthController extends BaseAuthController
 {
-    public function getLogin()
+    public function getLogin(Content $content)
     {
         if ($this->guard()->check()) {
-            return redirect($this->redirectPath());
+            return redirect($this->getRedirectPath());
         }
 
         $sources = \Arr::only(ThirdAccount::sources(), config('admin-oauth.enabled_thirds'));
